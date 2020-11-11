@@ -1,6 +1,6 @@
 <?php
 require 'core.inc.php';
-require 'connect-Users.php';
+include_once 'dbconnect.php';
 
 if(isset($_SESSION['user_id'])&&!empty($_SESSION['user_id'])){
 			$fname = getuserfield('Fname',$_SESSION['user_id']);
@@ -39,7 +39,7 @@ if(isset($_SESSION['user_id'])&&!empty($_SESSION['user_id'])){
 										</ul>
 										<ul class="nav navbar-nav navbar-right">	
 											<li class="active custom1"><a href="#">Home</a></li>
-											<li class="custom1"><a href="#">Chat Room</a></li>															
+											<li class="custom1"><a href="chat1.php">Chat Room</a></li>															
 											<li class="dropdown"><a href="#">'.$fname.' '.$lname.'<span class="caret"></span></a>
 												<ul class="dropdown-menu">
 													<li><a href="#">HTML</a></li>

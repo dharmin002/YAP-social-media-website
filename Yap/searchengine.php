@@ -29,7 +29,7 @@
 	<body>
 	<?php 
 		require 'core.inc.php';
-		require 'connect-Users.php';
+		require 'dbconnect.php';
 		$fname = getuserfield('Fname',$_SESSION['user_id']);
 		$lname = getuserfield('Lname',$_SESSION['user_id']);
 	?>
@@ -91,7 +91,7 @@
 				<br>
 				<section id="main-section">
 					<?php   
-					require 'connect-Users.php';
+					require 'dbconnect.php';
 					$search = $_GET['search'];
 					$terms = explode(" ", $search);
 					$query = "SELECT * FROM users WHERE `Fname` LIKE";
@@ -106,8 +106,8 @@
 											<img src="profile/img/profile.jpeg" class="img-circle img-responsive"width="50px height="50px">
 											<form action="sendrequest.php" method="post">
 												<?php echo $row['Fname'].' '.$row['Lname'];?>
-												<input type="hidden" name="friend_id" value=<?php echo $row['Id']; ?>>
-												<?php if(isfriend(getuserfield('Email',$_SESSION['user_id']),$row['Id'])||$row['Email']==getuserfield('Email',$_SESSION['user_id'])){}
+												<input type="hidden" name="friend_id" value=<?php echo $row['user_id']; ?>>
+												<?php if(isfriend(getuserfield('email',$_SESSION['user_id']),$row['user_id'])||$row['email']==getuserfield('email',$_SESSION['user_id'])){}
 												else{	
 												echo '<button type="submit" class="btn btn-custom btn-one btn-sm">Send Request!</button>';
 												}?>

@@ -1,5 +1,5 @@
 <?php
-	require 'connect-Users.php';	
+	include_once 'dbconnect.php';	
 	require 'core.inc.php';
 		if(isset($_POST['friend_id'])){
 			$friend = $_POST['friend_id'];
