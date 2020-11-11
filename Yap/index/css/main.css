@@ -1,0 +1,80 @@
+*{margin:0px;padding:0px;}  /*to reset all margins and paddings to 0 initially since we dont know default padding values of different tags*/
+
+header,section,nav,footer,aside,article{display:block;} /*initial setting to block form. Then later on set nav bar as inline if required*/
+body {
+   font-family: 'Times New Roman', sans-serif;
+   line-height: 30px;
+   font-size: 20px;
+}
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#big_wrapper{display:-webkit-box; -webkit-box-orient:vertical; -webkit-box-flex:1; background:#ffffff; }
+
+#wrapper{border:1px solid #cccccc;margin-top:200px; margin-left:200px; margin-right:200px; margin-bottom:20px;display:-webkit-box; -webkit-box-orient:horizontal;
+        background:white; }
+
+.btn-custom {
+    border-radius:30px;
+	-webkit-border-radius:30px;
+	-moz-border-radius:30px;
+	padding:15px;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	color: #fff;
+	margin:5px 5px 5px 0px;
+}
+#button{
+position:relative;
+ 
+padding-right:35px;
+}
+.btn-one {   
+background-color: #16A8C2;
+border:2px solid #16A8C2; 
+position:relative;
+margin:0 auto;     
+}
+.btn-one:hover {
+	color:#fff;
+	background-color:transparent;
+}
+#home {
+    background: url(../img/home.jpg) no-repeat center center; /*Full Witdth background image*/
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+	height:100%;
+}
+#home .overlay {
+    padding-top: 50px;
+    background-color: rgba(34, 34, 34, 0.4);
+    min-height: 700px;
+    padding-bottom: 40px;
+}
+
+#home h4 {
+	
+    margin-top: 0px;
+    margin-bottom:10px;
+    line-height:40px;
+    letter-spacing:2px;
+    font-size:22px;
+	font-style:bold;
+    color:#fff;
+
+}
+#home .register {
+	background-color: rgba(255,255,255,0.3);
+    	
+}
+#home .quote{
+	padding-top : 60px;	
+
+}
+#lastname{margin-top:-30px;}
+#logo{padding:10px;}
